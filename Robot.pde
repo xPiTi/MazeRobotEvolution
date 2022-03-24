@@ -30,14 +30,14 @@ class Robot{
   
   
   Robot(float x, float y, float a, float ls, float rs, float ss){
-    this.x = x;
+    this.x = x; 
     this.y = y;
     this.angle = a;
     this.speed = ls;
     this.roatationSpeed = rs;
     this.sensorSpacing = ss;
     
-    img = loadImage("robot.png");
+    img = loadImage("data/robot.png");
     sensor1 = new SonicSensor();
     sensor2 = new SonicSensor();
     sensor3 = new SonicSensor();

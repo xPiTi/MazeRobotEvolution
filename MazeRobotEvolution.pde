@@ -22,7 +22,7 @@ void setup() {
   smooth(8);
 
   map = new ObsteacleMap();
-  map.loadJSON("data.json");
+  map.loadJSON("data/map.json");
   
   //x, y, a, ls, rs, ss;
   robots.add(new Robot(0.25, 0.25, 0, 0.005, 0.02051, 1));
