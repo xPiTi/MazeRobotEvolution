@@ -56,8 +56,11 @@ void draw() {
   }
 
   if (centerOnRobot) {
-    panXG = toScreen(-robots.get(0).x)+width/2;
-    panYG = toScreen(-robots.get(0).y)+height/2;
+    Robot robotToCenter = getBestScoreRobot();
+    if(robotToCenter != null){
+      panXG = toScreen(-robotToCenter.x)+width/2;
+      panYG = toScreen(-robotToCenter.y)+height/2;
+    }
   }
 
   drawCross( round( toUnitX(mouseX)*20 )/20.0, round( toUnitY(mouseY)*20 )/20.0 );

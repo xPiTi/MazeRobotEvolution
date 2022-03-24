@@ -52,3 +52,16 @@ void drawScaleGauge(){
     rect(10+toScreen(0.1)*i, height-20, toScreen(0.1), 10);
   }
 }
+
+Robot getBestScoreRobot(){
+  Robot ret = null;
+  int bestScore = 0;
+  for(Robot r : robots){
+    if(r.score > bestScore){
+      bestScore = r.score;
+      ret = r;
+    }
+  }
+  
+  return ret;
+}
